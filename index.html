@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Stay Prediction</title>
+</head>
+<body>
+    <h2>Predict Hospital Stay Duration</h2>
+    <form action="/predict" method="post">
+        <label>Age:</label><br>
+        <input type="number" name="age" required><br><br>
+
+        <label>Billing Amount:</label><br>
+        <input type="number" step="0.01" name="billing" required><br><br>
+
+        <label>Medical Condition:</label><br>
+        <input type="text" name="condition" required><br><br>
+
+        <label>Admission Type:</label><br>
+        <input type="text" name="admission" required><br><br>
+
+        <label>Test Results:</label><br>
+        <input type="text" name="test_result" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
